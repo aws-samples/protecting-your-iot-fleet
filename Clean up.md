@@ -1,8 +1,7 @@
-Delete IAM user
-Delete Rule
-Delete Security Profile
-Delete Audit Schedule
-Delete Thing
-Delete Thing Group
-Delete Policy
-Delete Certificate
+## Clean up resources in AWS IoT
+* DeletePolicy 'TemperatureSensorPolicy'
+* Delete Certificate
+* Delete Thing, Thing Group
+* Delete Audit Schedule
+* Delete Security Profile
+* Delete IAM user
