@@ -29,3 +29,10 @@ Once done, we recommend you clean up the elements you created to ensure you don'
 
 # Remember to clean up if you do this lab at your own pace.
 Follow this [instruction to clean up](Clean%20up.md)
+
+## License Summary
+
+The documentation is made available under the Creative Commons Attribution-ShareAlike 4.0 International License. See the LICENSE file.
+
+The sample code within this documentation is made available under the MIT-0 license. See the LICENSE-SAMPLECODE file.
+
