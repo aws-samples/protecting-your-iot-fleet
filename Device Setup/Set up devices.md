@@ -27,7 +27,7 @@ The last step before the Session is to push code and a certificate file to the I
 
 ## Preparing your IoT Device code
 
-1.  Download the example IoT Temperature Sensor code from <https://raw.githubusercontent.com/hongpham/Protecting-your-IoT-Fleet/master/TempGatherPlusIoT.ino> to your project folder
+1.  Download the example IoT Temperature Sensor code from [TempGatherPlusIoT.ino](../TempGatherPlusIoT.ino) to your project folder
 2.  Open Arduino
 3.  Click on “File” and then “Open”
 4.  Navigate to your project folder
