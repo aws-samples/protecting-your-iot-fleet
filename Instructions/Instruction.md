@@ -18,7 +18,7 @@ Looks like you already have a sensor configured. What details can you see about 
 
 ## 2. Thing Authorization - Certificate-based
 1. Go back to the **IoT Core** console {Left arrow on the left}
-2. Where would you expect to find **Security** related configurations like Certificates?
+2. Where would you expect to find **Security** related configurations like **Certificates**?
 3. What **Details** would you want to know about your certificates?
 4. How do we know which Certificates are attached to which **Things**?
 5. What **Actions** would you potentially want to see performed on Certificates?
@@ -73,8 +73,9 @@ The first question we have to ask ourselves is: what should the device behavior 
     1. Auth Failures should always be less than 0 (unless someone is trying to do something they do not have permissions to)
         1. Behavior named **GoodAuthentication** could be defined as **Authorization failures** of **Absolute Value** **Less than or equals** **"0"** **every 5 minutes**. Today we don't want to notify anyone, but we do want to **Attach to** a **Specific Things Group**, say the **TemperatureSensors**. We should **Save** that idea and **Continue**.
     2. Message size less than 1 (since message size and # of messages are a cost factor, we want to guard against billing abuse) 
-        1. Additionally, we know our **SmallMessages** should be defined as **Message Size** of **less than** "**1**". We still don't want to notify anyone, but this should apply to **All Things**.
+        1. Additionally, a new Security profile **SmallMessages** should be defined as **Message Size** of **less than** "**1**".
         2. But when we set this alert up, we realize we want to **retain additional metrics** around the **Connection Attempts**. This way we can track where bad messages are coming from and visualize it later.
+        3. We still don't want to notify anyone, but this should apply to **All Things**.
 4. Checking out the **Profile Name** of the Security Profile we setup, we can see if Things have any **Violations**
 5. We can also check the **Defender Metrics** to visualize the data we've captures.
 6. Looking at the **Connection Attempts** **Average** over the **last 24 hours** for example will show us whether the alerms have additional, actionable telemetry.
