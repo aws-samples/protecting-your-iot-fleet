@@ -18,7 +18,7 @@ Looks like you already have a sensor configured. What details can you see about 
 
 ## 2. Thing Authorization - Certificate-based
 1. Go back to the **IoT Core** console {Left arrow on the left}
-2. Whre would you expect to find **Security** related configurations like Certificates?
+2. Where would you expect to find **Security** related configurations like Certificates?
 3. What **Details** would you want to know about your certificates?
 4. How do we know which Certificates are attached to which **Things**?
 5. What **Actions** would you potentially want to see performed on Certificates?
