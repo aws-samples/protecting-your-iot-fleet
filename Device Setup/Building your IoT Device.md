@@ -38,4 +38,4 @@ Here is the end result.
 
 ![](../images/IoT_device_side_view.png)
 
-Once these steps are complete, you can move on to [Connect devices to your laptop](Connect%20devices%20to%20your%20laptop.md). here you will install the appropriate software on your computer to connect to the device.
+Once these steps are complete, you can move on to [Connect devices to your laptop](Connect%20devices%20to%20your%20laptop.md). Here you will install the appropriate software on your computer to connect to the device.
