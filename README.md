@@ -6,7 +6,7 @@ If you follow this lab as part of Builder Session at re:Inforce 2019, devices ar
 
 [Build your IoT Device](Device%20Setup/Building%20your%20IoT%20Device.md) - This set of instructions will walk you through the building of your IoT Device for this Session
 
-[Connect devices to your laptop](Device%20Setup/Connect%20devices%20to%20your%20laptop.md) - After building thde device, these instructions help you install the appropriate software on your computer to connect to the device.
+[Connect devices to your laptop](Device%20Setup/Connect%20devices%20to%20your%20laptop.md) - After building the device, these instructions help you install the appropriate software on your computer to connect to the device.
 
 [Register your devices to AWS IoT Core](Device%20Setup/Register%20devices%20to%20AWS%20IoT.md) - And last, these instructions then connect the device to your AWS IoT Account
 
