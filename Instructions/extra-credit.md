@@ -7,7 +7,7 @@ Device Jobs allow a user-specified on-device response to a Job Document. Jobs ca
 
 1. First, let's create a new **Thing** **Group** called "**NeedsUpdate**"
 
-For the sake of not wasting time, let's assume a scenario. In the "acceptablebehavior" Security Profile we created, we could have taken action on devices that were out of tolerance. Actions can include calling a Lambda function, such a a function that would add a Thing to a specific Thing Group. For the following steps, assume this has been created and done. If you wish to test it out and see it occuring, you will have to write your own Lambda script at this time.
+For the sake of not wasting time, let's assume a scenario. In the "acceptablebehavior" Security Profile we created, we could have taken action on devices that were out of tolerance. Actions can include calling a Lambda function, such a a function that would add a Thing to a specific Thing Group. For the following steps, assume this has been created and done. If you wish to test it out and see it occurring, you will have to write your own Lambda script at this time.
     
 2. Let’s **Manage** our **Jobs** to start.
     1. A job is just a free-format JSON document, that the device can read to trigger some action or set of actions
