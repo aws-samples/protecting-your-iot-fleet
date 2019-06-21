@@ -20,7 +20,7 @@ Welcome to learning how to protect your IoT fleet at scale using AWS IoT Device 
 3. Evaluate Device Groups to set permissions on groups of Things
 4. Monitor Thing Activity from the console
 5. Create and review Audit Schedules for your account
-6. Use Device Defnder to Detect rule-based and anomoloy-based deviations in behavior
+6. Use Device Defender to Detect rule-based and anomoloy-based deviations in behavior
 7. Enable automated remediations in response to these events
  
 Follow this [instruction to start the lab](Instructions/Instruction.md) 
