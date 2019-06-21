@@ -40,7 +40,7 @@ In this set of instructions we will use our AWS account to create an IoT Device 
 18. Click “Create a policy”
     1.  Type “TemperatureSensorPolicy” in the “Name” field
     2.  Type “iot:\*” in the “Action” field
-    3.  In the “Resource ARN” field, replace “replaceWithATopic” with “\*”
+    3.  In the “Resource ARN” field, replace the entire ARN with “\*”
     4.  Click on the right box before “Allow”
     5.  Click the “Create” button
 19. Click on “Manage” on the left-hand navigation
