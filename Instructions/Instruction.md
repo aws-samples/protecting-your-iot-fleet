@@ -6,7 +6,7 @@
 6. [Device Defender ‘Detect’ - Security Monitoring and Anomaly Detection in devices](#6-Device-Defender-Detect---Security-Monitoring-and-Anomaly-Detection-in-devices)
 7. [Statistical Anomaly Detection - Security Profiles with percentile based behaviors](#7-Statistical-Anomaly-Detection---Security-Profiles-with-percentile-based-behaviors)
 
-For ease of experience, this document outlines the general steps you will take instead of a direct "click here and then here and then here...". This lab should help you learn the interface, so these instructions are more of a guide (with some pretty blatent hints) than a tutorial. 
+For ease of experience, this document outlines the general steps you will take instead of a direct "click here and then here and then here...". This lab should help you learn the interface, so these instructions are more of a guide (with some pretty blatant hints) than a tutorial. 
 
 ## 1. Validate and Understand AWS IoT "Things"
 1. Go to the **IoT Core** service in the console
@@ -29,7 +29,7 @@ It's important to make sure we trust the messages coming from our sensors. By us
 
 1. Go back to the **IoT Core** console {Left arrow on the left}
 2. Permissions can be set in multiple places, but groups help us keep track of like devices. So **Managing Thing Groups** can help us maintain those associates and permissions with them.
-3. What **Things** are part of what **Groups** in this demo?
+3. What **Things** are a part of what **Groups** in this demo?
 4. What **Security** permissions have been allocated to this group?
 
 Does that policy look right to you?
@@ -37,14 +37,14 @@ Does that policy look right to you?
 ## 4. Monitoring the sensor in front of you
 
 1. Let's go back to the **Thing** in front of you
-2. Is there any **Activity** going on right now? Wouldn"t it be great to **Shadow** the device's changes?
+2. Is there any **Activity** going on right now? Wouldn't it be great to **Shadow** the device's changes?
 3. How does the real world Thing **Interact** with the shadow?
 
-Okay, so now you have a primer on what exactly the IoT Sensor in front of you is doing and how it interacts with the AWS IoT Core service. You could have dozens, or hundreds of thousands of these devices and they would all work the same way. But auditing dozens vs. hundreds of thousands could be cumbersome if you don"t have the right tools. So let's look at the tools **AWS IoT Device Defender** provides.
+Okay, so now you have a primer on what exactly the IoT Sensor in front of you is doing and how it interacts with the AWS IoT Core service. You could have dozens, or hundreds of thousands of these devices and they would all work the same way. But auditing dozens vs. hundreds of thousands could be cumbersome if you don't have the right tools. So let's look at the tools **AWS IoT Device Defender** provides.
 
 ## 5. Device Defender ‘Audit’ - continuous audit against detect security deviations
 
-1. Using Device **Defender** you"ll setup on-demand or periodic **audits**.
+1. Using Device **Defender** you'll setup on-demand or periodic **audits**.
 2. **Getting started with an audit** is a great way to ensure your IoT account is configured securely and stays that way.
 3. After **Reviewing Permission** for the Device Defender service, we can approve the defaults and move to what's **Next**.
 4. Let's review the **Checks** we can select. What Checks do you think are most relevant to your needs around IoT? Are service-side or IoT side risks more of a threat?
@@ -70,7 +70,7 @@ The first question we have to ask ourselves is: what should the device behavior 
 
 2. To **Create your first Security Profile**, we need to 
 3. We can define a **Profile** of **acceptablebehavior** then create some behaviors for some things we care about – 
-    1. Auth Failures should always be less than 0 (unless someone is trying to do something they do not have permissions to)
+    1. Authorization Failures should always be less than 0 (unless someone is trying to do something they do not have permissions to)
         1. Behavior named **GoodAuthentication** could be defined as **Authorization failures** of **Absolute Value** **Less than or equals** **"0"** **every 5 minutes**. Today we don't want to notify anyone, but we do want to **Attach to** a **Specific Things Group**, say the **TemperatureSensors**. We should **Save** that idea and **Continue**.
     2. Message size less than 1 (since message size and # of messages are a cost factor, we want to guard against billing abuse) 
         1. Additionally, a new Security profile **SmallMessages** should be defined as **Message Size** of **less than** "**1**".
@@ -78,7 +78,7 @@ The first question we have to ask ourselves is: what should the device behavior 
         3. We still don't want to notify anyone, but this should apply to **All Things**.
 4. Checking out the **Profile Name** of the Security Profile we setup, we can see if Things have any **Violations**
 5. We can also check the **Defender Metrics** to visualize the data we've captures.
-6. Looking at the **Connection Attempts** **Average** over the **last 24 hours** for example will show us whether the alerms have additional, actionable telemetry.
+6. Looking at the **Connection Attempts** **Average** over the **last 24 hours** for example will show us whether the alarms have additional, actionable telemetry.
 
 In reality we would set the message size higher, but this allows us to see how, if an IoT sensor starts sending bad data we could sense it and create an alarm. But what about acting upon issues in real time? What would that look like?
 
