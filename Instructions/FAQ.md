@@ -14,3 +14,9 @@
         A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header
         ```
     * This means the ESP32 chip is not going into flash/upload mode automatically. You can solve this problem by holding-down the “BOOT” button in your ESP32 board when you see the "Connecting....." text. The "BOOT" button if the one to the right of the USB plug.
+5. The device is connect but not sending data to AWS IoT Topic:
+   * One of the issue can be because Arduino unintentionlly compiled incorrect cert. 
+   * When you create project folder, it should be outside of Arduino folder like in the picture below. Also note that there shouldn't be other project folder that has different aws_iot_certificates.c.old. 
+   ![Folder layout](https://github.com/aws-samples/protecting-your-iot-fleet/blob/master/images/Folder%20layout.png)
+   * If you use aws_iot_certificates.c.old, it needs to have the same content with ws_iot_certificates.c
+   * Make sure TempGatherPlusIoT doesn’t have folder 'data' before you imported/added aws_iot_certificates.c.old to TempGatherPlusIoT.ino
