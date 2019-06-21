@@ -11,20 +11,21 @@ For the sake of not wasting time, let's assume a scenario. In the "acceptablebeh
     
 2. Let’s **Manage** our **Jobs** to start.
     1. A job is just a free-format JSON document, that the device can read to trigger some action or set of actions
-3. In a **new tab** download the **jobs-example.js** file from <https://github.com/aws/aws-iot-device-sdk-js/blob/master/examples/jobs-example.js> to use as an example.
+3. In a **new tab** download the **config.json** file from <https://github.com/aws/iot-atlas/raw/master/config.json> to use as an example.
 4. **Upload** the file you just downloaded to an **S3 bucket** in your account
     1. If you don't have an S3 bucket, just **create a private S3 bucket** for now.
 5. Back on the IoT Core console, **Create a job**, using the **Custom** option
 6. **Update-temp-firmware** would be a good name for a job targeting **selected devices to update** in the **Thing Group** **NeedsUpdate**.
-7. Being this is something  all devices should have, set the **Job Type** to a **continuous** deployment.
-8. Accepting the rest of the defaults for now we can **Create** this job.
+7. We will **add a job file** by **Selecting** the S3 bucket and .js file we just downloaded.
+8. Being this is something  all devices should have, set the **Job Type** to a **continuous** deployment.
+9. Accepting the rest of the defaults for now we can **Create** this job.
 
 So what we've just done is created a system by which any IoT device that ends up out of tolerance from our expected behavior gets automatically reflashed with new (example) code of our choosing. This is a great way to automatically detect and remediate issues in your IoT fleet.
 
 ## 2. Using IoT Rules, CloudWatch, and CloudWatch events to auto-remediate
 1.	If we wanted to **Act** upon certain behaviors, we could use **Rules**
 2.	**Create** a rule that could, for example, identify **HighHumidity** coming from the sensor
-    1.	This could be defined as Humidity above 50%, or in SQL terms **SELECT humidity from '$aws/things/IoTTempSensor-Test1/shadow/update' where humidity > 50**
+    1.	This could be defined as Humidity above 50%, or in SQL terms **SELECT Humidity FROM '$aws/things/IoTTempSensor-Test1/shadow/update' WHERE Humidity > 50**
     2.	There are now 15 different native actions we could take, and using Lambda nearly infinite. For now let’s **Send message data to CloudWatch**
     3.	We define a metric for CloudWatch.
         1.	**HighHumidity**
@@ -36,7 +37,7 @@ So what we've just done is created a system by which any IoT device that ends up
 
 Let’s kick this action off. First, **plug the yellow cable back in** if you still have it disconnected. The Temperature sensor we are using can be tricked into giving weird readings. To get this effect, **gently hold finger on the front of the sensor for about 60 seconds**. The sensor will either lose its mind, or register a high humidity, or both.
 
-3.	To see which one, let’s open **CloudWatch** in a **new ta**b from the Services drop down.
+3.	To see which one, let’s open **CloudWatch** in a **new tab** from the Services drop down.
 4.	We want to check **Metrics**, specifically **IoT - Rule Metrics** called **HighHumidity**.
 5.	**Check the box** to add it to the graph
 6.	To see how many times it failed, set the **Graphed Metric** Statistic to **Sum** for a period of **1 minute**.
