@@ -22,8 +22,8 @@ The last step before the Session is to push code and a certificate file to the I
 9.  Use a text editor to open the private pem key file the ends in “-private.pem.key”
 10.  Using the same copy and paste method in steps “c” and “d”, replace the contents of the array “private_pem_key” with the contents of the private pem key file
 11.  At the end of every line you replaced, add “\\n\\”.
-12.  Save the “aws_iot_certificates.c.old” file as “aws_iot_certificates.c” in your project folder
-    1.  You will use this file for you upcoming Arduino project
+12.  Save the “aws_iot_certificates.c.old” file as “aws_iot_certificates.c” in your **project folder**
+     1.  You will use this file for you upcoming Arduino project
 
 ## Preparing your IoT Device code
 
@@ -50,7 +50,8 @@ If you are running into issues with compiling your code, check the [FAQ](../Inst
 
 1.  Click on “Tools”
 2.  Click on “Port”
-    1.  Make note of the available COM ports
+    1.  Make note of the available COM ports.
+    2.  If there are no available COM ports, Port won't be an option
 3.  Click back into the editor
 4.  Using your USB cable, plug your IoT device into your computer
 5.  Click on “Tools”, and then “Ports”
