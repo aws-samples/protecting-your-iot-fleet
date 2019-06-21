@@ -60,8 +60,9 @@ If you are running into issues with compiling your code, check the [FAQ](../Inst
     1.  Upload Speed: 921600
     2.  Flash Frequency: 80MHz
 8.  Click on “Tools”, and then “Serial Monitor”
-    1.  You should see default code from the IoT device scrolling.
-    2.  If not, close and restart Arduino and try each port.
+    1.  If not already configured, set the Serial Monitor baud rate to 115200 baud.
+    2.  You should see default code from the IoT device scrolling.
+    3.  If not, close and restart Arduino and try each port.
 9.  Once the connection is established, click on the Right Arrow under the navigation bar
     1.  This will push the code to the ESP32
 
