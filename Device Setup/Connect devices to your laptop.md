@@ -7,7 +7,8 @@ Now that you're create the physical device, we will install the appropriate soft
 2.  Download the Arduino IDE
     1.  Go to the Arduino download page - <https://www.arduino.cc/en/Main/Software>
         1.  These instructions have been tested with Arduino 1.8.9 on Windows
-        2.  On Mac – menu instructions will be found under the Arduino Menu
+        2.  For Windows, use the Windows Installer, not the Windows Zip file or the Windows App
+        3.  On Mac – menu instructions will be found under the Arduino Menu
     2.  Install Arduino with the defaults, or modify as you see fit
 3.  After installing Arduino, install the appropriate ESP32 Chipset
     1.  Open Arduino
@@ -23,12 +24,22 @@ Now that you're create the physical device, we will install the appropriate soft
     11. Click on “Install”
 4.  Next, we need to download the DHT22 drivers
     1.  In Arduino, click on Tools in the top navigation
-    2.  Click on "Library Manager"
+    2.  Click on "Manage Libraries..."
     3.  In the search filed, type "DHT22"
     4.  Click on "DHT Sensor Library by Adafruit"
     5.  Select the latest version
     6.  Click on "Install"
     7.  Close the Library Manager
+    8.  Go to the Adafruit download page - <https://github.com/adafruit/Adafruit_Sensor>
+    9.  Click on “Clone or download” on the left
+    10.  Click “Download Zip”
+        1.  Save this file to your project folder
+    11.  Open the Zip file and find the folder “Adafruit_Sensor-master”
+    12.  Copy that folder to the Arduino IDE installation Libraries folder
+        1.  The default on Windows is “C:\\Program Files (x86)\\Arduino\\libraries\\”
+        2.  The default for Mac’s is “ \~/Documents/Arduino/libraries/”
+    13.  Rename the folder “Adafruit_Sensor”
+    14.  Close the Zip file
 5.  Last we install the AWS_IoT Drivers. Since we don’t need the full library, we will use the Hornbill library for the subset
     1.  Go to the Hornbill GitHub repo - <https://github.com/ExploreEmbedded/Hornbill-Examples>
     2.  Click on “Clone or download” on the left
