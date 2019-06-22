@@ -18,5 +18,6 @@
    * One of the issue can be because Arduino unintentionlly compiled incorrect cert. 
    * When you create project folder, it should be outside of Arduino folder like in the picture below. Also note that there shouldn't be other project folder that has different aws_iot_certificates.c.old. 
    ![Folder layout](https://github.com/aws-samples/protecting-your-iot-fleet/blob/master/images/Folder%20layout.png)
-   * If you use aws_iot_certificates.c.old, it needs to have the same content with ws_iot_certificates.c
+   * If you use aws_iot_certificates.c.old, it needs to have the same content with aws_iot_certificates.c
    * Make sure TempGatherPlusIoT doesn’t have folder 'data' before you imported/added aws_iot_certificates.c.old to TempGatherPlusIoT.ino
+   * On Windows this shouldn't be a problem if you use the appropriate aws_iot_certificates.c name for you customer certificate file.
