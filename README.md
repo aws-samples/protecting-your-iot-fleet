@@ -1,14 +1,14 @@
 # Protecting-your-IoT-Fleet
-This repository contains a list of instruction for Builder Session SDD307 at AWS 2019 re:Inforce. It provide instruction on how to use AWS IoT to securely manage your IoT Devices
+This repository contains a list of instruction for Builder Session SDD307 at AWS 2019 re:Inforce. It provides instruction on how to use AWS IoT to securely manage your IoT Devices
 
 # Prerequisite: set up and configure devices
-If you follow this lab as part of Builder Session at re:Inforce 2019, devices are already configured. You will not need to do this prerequisite. This step is required if you do this lab on your own.
+If you follow this lab as part of Builder Session at re:Inforce 2019, devices are already configured. You will not need to do this prerequisite. These steps are required if you do this lab on your own.
 
 [Build your IoT Device](Device%20Setup/Building%20your%20IoT%20Device.md) - This set of instructions will walk you through the building of your IoT Device for this Session
 
-[Connect devices to your laptop](Device%20Setup/Connect%20devices%20to%20your%20laptop.md) - After building the device, these instructions help you install the appropriate software on your computer to connect to the device.
+[Connect devices to your laptop](Device%20Setup/Connect%20devices%20to%20your%20laptop.md) - After building the device, these instructions help you install appropriate softwares on your computer to connect to the device.
 
-[Register your devices to AWS IoT Core](Device%20Setup/Register%20devices%20to%20AWS%20IoT.md) - And last, these instructions then connect the device to your AWS IoT Account
+[Register your devices to AWS IoT Core](Device%20Setup/Register%20devices%20to%20AWS%20IoT.md) - These instructions show you hw to connect the device to your AWS IoT Account
 
 [Push files to your IoT Device](Device%20Setup/Set%20up%20devices.md) - Once connected, these instructions walk you through pushing the appropriate code and certificates to your IoT Device.
 
