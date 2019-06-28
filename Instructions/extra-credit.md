@@ -25,7 +25,7 @@ So what we've just done is created a system by which any IoT device that ends up
 ## 2. Using IoT Rules, CloudWatch, and CloudWatch events to auto-remediate
 1.	If we wanted to **Act** upon certain behaviors, we could use **Rules**
 2.	**Create** a rule that could, for example, identify **HighHumidity** coming from the sensor
-    1.	This could be defined as Humidity above 50%, or in SQL terms **SELECT Humidity FROM '$aws/things/IoTTempSensor-Test1/shadow/update' WHERE Humidity > 50**
+    1.	This could be defined as Humidity above 50%, or in SQL terms **SELECT Humidity FROM '$aws/things/IoT-Temperature-Device/shadow/update' WHERE Humidity > 50**
     2.	There are now 15 different native actions we could take, and using Lambda nearly infinite. For now let’s **Send message data to CloudWatch**
     3.	We define a metric for CloudWatch.
         1.	**HighHumidity**
