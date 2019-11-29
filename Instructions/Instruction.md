@@ -45,14 +45,14 @@ Okay, so now you have a primer on what exactly the IoT Sensor in front of you is
 ## 5. Device Defender ‘Audit’ - continuous audit against detect security deviations
 
 1. Using Device **Defender** you'll setup on-demand or periodic **audits**.
-2. **Getting started with an audit** is a great way to ensure your IoT account is configured securely and stays that way.
-3. After **Reviewing Permission** for the Device Defender service, we can approve the defaults and move to what's **Next**.
+2. Go to IoT Core console, click on **Defend**, then click on **Audit**. **Getting started with an audit** is a great way to ensure your IoT account is configured securely and stays that way.
+3. **Reviewing Permission**, for the Device Defender service. Then **Create Role** to allow AWS IoT to access resources on your behalf. We can approve the defaults and move to what's **Next**.
 4. Let's review the **Checks** we can select. What Checks do you think are most relevant to your needs around IoT? Are service-side or IoT side risks more of a threat?
-    1. It makes sense to **enable all checks** before moving on to what's **Next**.
+    1. It makes sense to enable all checks before moving on to what's **Next**.
 5. We're not too worried about alerting right now, so simply **Enabling the audits** would be good for now.
 6. While we can see a Daily audit is a great default, let's **Create** our own audit to run now.
 7. Let's create one with **all the checks** and **run the audit now** to get a good sense of what our account looks like.
-8. After a minute we can view the **Results** of our **On-demand**. 
+8. After a few minutes we can view the **Results** of our **On-demand**. 
 9. Do the results surprise you? Does **expanding** the compliant checks provide insight on how it can scan thousands of authentication issues very quickly?
 
 These audits will ensure your Account configuration, your Device configuration, and your Authentication configuration to all be audited. There are some good questions that you can ask yourself as you create your IoT ecosystem including:
@@ -69,7 +69,7 @@ The last question also bring up a new question - what about device behavior? Wha
 The first question we have to ask ourselves is: what should the device behavior actually look like? There's also an opportunity here  when grouping devices so that all devices with similar expected behavior are in the same group.
 
 2. To **Create your first Security Profile**, we need to 
-3. We can define a **Profile** of **acceptablebehavior** then create some behaviors for some things we care about – 
+3. We can define a **Profile** of **Expected Behaviors** then create some behaviors for some things we care about – 
     1. Authorization Failures should always be less than 0 (unless someone is trying to do something they do not have permissions to)
         1. Behavior named **GoodAuthentication** could be defined as **Authorization failures** of **Absolute Value** **Less than or equals** **"0"** **every 5 minutes**. Today we don't want to notify anyone, but we do want to **Attach to** a **Specific Things Group**, say the **TemperatureSensors**. We should **Save** that idea and **Continue**.
     2. Message size less than 1 (since message size and # of messages are a cost factor, we want to guard against billing abuse) 
