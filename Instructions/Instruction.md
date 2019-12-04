@@ -90,7 +90,7 @@ It's always nice when you know the exact behavior of you devices, but what about
 2. A profile named **SensorDisconnect** describing the behavior of **NoData** when **Messages Received** fall out of a **Statistical Threshold** **less than** **P50** for **5 minutes** with **1** data point to alarm on. We would not notify anyone, but we would **Attach** this to **All things**. Of course we **Save** and **Continue** with this.
     1. This will alert us when a device falls below 50% of the expected Messages Received for 5 minutes based on past data.
 
-Now to trigger this last finding, we will disconnect the DHT22 sensor from the device. Gentle grasp the yellow wire and pull it out of the breadboard. Now we can wait 5 minutes and watch as the sensor doesn't update and the alarm will get triggered.
+Now to trigger this last finding, we will disconnect the DHT22 sensor from the device. Gentle grasp the data wire (Row 23 Column J) and pull it out of the breadboard. Now we can wait 5 minutes and watch as the sensor doesn't update and the alarm will get triggered.
 
 3. Checking out the **SensorDisconnect** **Profile Name**, we can see if Things have any **Violations**.
     1. Here we should see that the device has fallen below the threshold (as long as enough time has passed) and is in alarm
